@@ -3,6 +3,7 @@
   var menu = document.querySelector("#" + burger.dataset.target);
   burger.addEventListener("click", function() {
     burger.classList.toggle("is-active");
+    burger.setAttribute('aria-expanded', !(burger.getAttribute('aria-expanded') === "true"));
     menu.classList.toggle("is-active");
   });
 })();
@@ -19,9 +20,11 @@ function toggleTab(selectedNav, targetId) {
   navEls.forEach(function(navEl) {
     if (navEl.id == selectedNav) {
       navEl.classList.add("is-active");
+      navEl.firstElementChild.setAttribute('aria-selected', true);
     } else {
       if (navEl.classList.contains("is-active")) {
         navEl.classList.remove("is-active");
+				navEl.firstElementChild.setAttribute('aria-selected', false);
       }
     }
   });

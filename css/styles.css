@@ -23,7 +23,6 @@
 }
 
 .tabs {
-  margin-bottom: -1px !important;
   position: relative;
 }
 .tab-content {
@@ -171,10 +170,23 @@ a.tag:hover {
 .hero.is-info .subtitle {
   color: white;
 }
+.hero.is-info .tabs.is-boxed li .button {
+  background-color: #176bee;
+  border-color: transparent;
+  color: white;
+}
+.hero.is-info .tabs.is-boxed li .button:focus,
+.hero.is-info .tabs.is-boxed li.is-active .button:focus {
+  border-color: #4a4a4a;
+}
 .hero.is-info .tabs.is-boxed li.is-active a,
+.hero.is-info .tabs.is-boxed li.is-active .button,
 .hero.is-info .tabs.is-boxed li.is-active a:hover,
+.hero.is-info .tabs.is-boxed li.is-active .button:hover,
 .hero.is-info .tabs.is-toggle li.is-active a,
 .hero.is-info .tabs.is-toggle li.is-active a:hover {
+  background-color: white;
+  border-color: white;
   color: #176bee;
 }
 .tag:not(body).is-primary {

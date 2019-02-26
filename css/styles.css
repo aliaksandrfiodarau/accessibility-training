@@ -24,21 +24,14 @@
 
 .tabs {
   position: relative;
+  justify-content: center;
 }
 .tab-content {
   padding: 2rem;
 }
 .tab-pane {
-  display: none;
-}
-.tab-pane.is-active {
-  display: block;
   position: relative;
 }
-.is-active {
-  display: initial;
-}
-
 .cent {
   display: block;
   margin: 10px auto;
@@ -170,19 +163,19 @@ a.tag:hover {
 .hero.is-info .subtitle {
   color: white;
 }
-.hero.is-info .tabs.is-boxed li .button {
+.hero.is-info .tabs.is-boxed .button {
   background-color: #176bee;
   border-color: transparent;
   color: white;
 }
-.hero.is-info .tabs.is-boxed li .button:focus,
-.hero.is-info .tabs.is-boxed li.is-active .button:focus {
+.hero.is-info .tabs.is-boxed .button:focus,
+.hero.is-info .tabs.is-boxed .button[aria-selected="true"]:focus {
   border-color: #4a4a4a;
 }
 .hero.is-info .tabs.is-boxed li.is-active a,
-.hero.is-info .tabs.is-boxed li.is-active .button,
+.hero.is-info .tabs.is-boxed .button[aria-selected="true"],
 .hero.is-info .tabs.is-boxed li.is-active a:hover,
-.hero.is-info .tabs.is-boxed li.is-active .button:hover,
+.hero.is-info .tabs.is-boxed .button[aria-selected="true"]:hover,
 .hero.is-info .tabs.is-toggle li.is-active a,
 .hero.is-info .tabs.is-toggle li.is-active a:hover {
   background-color: white;

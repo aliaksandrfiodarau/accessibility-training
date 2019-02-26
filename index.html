@@ -310,38 +310,28 @@
           <div class="subtitle">We are always in touch we the outside world</div>
         </div>
       </div>
-      <nav class="tabs is-boxed is-centered main-menu" id="nav" aria-label="Tab navigation">
-        <ul role="tablist">
-          <li data-target="pane-1" id="1">
-            <button class="button" role="tab" aria-controls="pane-1" aria-selected="false">
-              <span class="icon is-small fa fa-image" aria-hidden="true"></span>
-              <span id="tab-title-1">Pictures</span>
-            </button>
-          </li>
-          <li data-target="pane-2" id="2" class="is-active">
-            <button class="button" role="tab" aria-controls="pane-2" aria-selected="true">
-              <span class="icon is-small fab fa-empire" aria-hidden="true"></span>
-              <span id="tab-title-2">Article</span>
-            </button>
-          </li>
-          <li data-target="pane-3" id="3">
-            <button class="button" role="tab" aria-controls="pane-3" aria-selected="false">
-              <span class="icon is-small fab fa-superpowers" aria-hidden="true"></span>
-              <span id="tab-title-3">Team</span>
-            </button>
-          </li>
-          <li data-target="pane-4" id="4">
-            <button class="button" role="tab" aria-controls="pane-4" aria-selected="false">
-              <span class="icon is-small fa fa-film" aria-hidden="true"></span>
-              <span id="tab-title-4">Video</span>
-            </button>
-          </li>
-        </ul>
-      </nav>
+      <div role="tablist" class="tabs is-boxed is-centered main-menu" id="nav" aria-label="Tab navigation" aria-orientation="horizontal">
+        <button class="button" role="tab" data-target="pane-1" data-id="1" aria-controls="pane-1" aria-selected="false" tabindex="-1">
+          <span class="icon is-small fa fa-image" aria-hidden="true"></span>
+          <span id="tab-title-1">Pictures</span>
+        </button>
+        <button class="button is-active" role="tab" data-target="pane-2" data-id="2" aria-controls="pane-2" aria-selected="true">
+          <span class="icon is-small fab fa-empire" aria-hidden="true"></span>
+          <span id="tab-title-2">Article</span>
+        </button>
+        <button class="button" role="tab" data-target="pane-3" data-id="3" aria-controls="pane-3" aria-selected="false" tabindex="-1">
+          <span class="icon is-small fab fa-superpowers" aria-hidden="true"></span>
+          <span id="tab-title-3">Team</span>
+        </button>
+        <button class="button" role="tab" data-target="pane-4" data-id="4" aria-controls="pane-4" aria-selected="false" tabindex="-1">
+          <span class="icon is-small fa fa-film" aria-hidden="true"></span>
+          <span id="tab-title-4">Video</span>
+        </button>
+      </div>
     </section>
 
     <div class="tab-content container">
-      <div role="tabpanel" tabindex="0" class="tab-pane" id="pane-1" aria-labelledby="tab-title-1">
+      <div role="tabpanel" tabindex="0" class="tab-pane" id="pane-1" aria-labelledby="tab-title-1" hidden="hidden">
         <div class="container">
           <div class="columns features">
             <div class="column is-4">
@@ -397,7 +387,7 @@
         </div>
       </div>
 
-      <div role="tabpanel" tabindex="0" class="tab-pane is-active" id="pane-2" aria-labelledby="tab-title-2">
+      <div role="tabpanel" tabindex="0" class="tab-pane" id="pane-2" aria-labelledby="tab-title-2">
         <div class="content">
           <div class="is-1 title">Hello World</div>
           <p>Lorem ipsum<sup><a>[1]</a></sup> dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque. Sub<sub>script</sub> works as well!</p>
@@ -489,7 +479,7 @@
         </div>
       </div>
 
-      <div role="tabpanel" tabindex="0" class="tab-pane" id="pane-3" aria-labelledby="tab-title-3">
+      <div role="tabpanel" tabindex="0" class="tab-pane" id="pane-3" aria-labelledby="tab-title-3" hidden="hidden">
         <div class="columns medias">
           <div class="column">
             <div class="media">
@@ -550,7 +540,7 @@
         </div>
       </div>
 
-      <div role="tabpanel" tabindex="0" class="tab-pane" id="pane-4" aria-labelledby="tab-title-4">
+      <div role="tabpanel" tabindex="0" class="tab-pane" id="pane-4" aria-labelledby="tab-title-4" hidden="hidden">
         <a href="#tours" class="skip-video visually-hidden" tabindex="0">Skip video</a>
         <div class="columns is-centered">
           <div class="column is-three-quarters">
@@ -1041,7 +1031,7 @@
           <div class="field">
             <label for="contact-email" class="label">Email</label>
             <div class="control has-icons-left has-icons-right">
-              <input class="input is-danger" id="contact-email" name="contact-email" type="email" placeholder="Email input" value="hello@" required>
+              <input class="input is-danger" id="contact-email" aria-invalid="true" name="contact-email" type="email" placeholder="Email input" value="hello@" required>
               <span class="icon is-small is-left fas fa-envelope" aria-hidden="true"></span>
               <span class="icon is-small is-right fas fa-exclamation-triangle" aria-hidden="true"></span>
             </div>

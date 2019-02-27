@@ -13,6 +13,9 @@
   width: auto;
   clip: auto;
 }
+.hidden {
+  display: none !important;
+}
 .skip-video {
   color: black;
 }
@@ -204,6 +207,32 @@ a.tag:not(body).is-danger:hover {
 .input.is-success,
 .textarea.is-success {
   border-color: #01802e;
+}
+
+form .field .help,
+form .icon.fa-exclamation-triangle,
+form .icon.fa-check {
+  display: none;
+}
+
+form .control.is-valid .icon.fa-check {
+  display: flex;
+}
+
+form .control.is-invalid .icon.fa-exclamation-triangl {
+  display: flex;
+}
+
+form .control.is-valid ~ .help.is-success {
+  display: block;
+}
+
+form .control.is-invalid ~ .help.is-danger {
+  display: block;
+}
+
+#birth-year-help {
+  display: block;
 }
 
 @media screen and (max-width: 1087px) {
